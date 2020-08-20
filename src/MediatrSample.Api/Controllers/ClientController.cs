@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using MediatrSample.Api.Models;
 using MediatrSample.Application.Commands.AddClientCommand;
 using MediatrSample.Application.Commands.ArchiveClientCommand;
 using MediatrSample.Application.Queries.GetAllClientsQuery;
@@ -6,6 +7,7 @@ using MediatrSample.Application.Queries.GetClientQuery;
 using MediatrSample.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace MediatrSample.Api.Controllers
@@ -26,7 +28,7 @@ namespace MediatrSample.Api.Controllers
         {
             var result = await _mediator.Send(new GetClientQuery(id));
 
-            return Ok(result);
+            return Ok(new ClientDto(result.Client));
         }
 
         [HttpGet]
@@ -34,7 +36,7 @@ namespace MediatrSample.Api.Controllers
         {
             var result = await _mediator.Send(new GetAllClientsQuery());
 
-            return Ok(result);
+            return Ok(result.Clients.Select(i => new ClientDto(i)));
         }
 
         [HttpPut("{id}")]
@@ -54,11 +56,11 @@ namespace MediatrSample.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddClient([FromBody] Client client)
+        public async Task<IActionResult> AddClient([FromBody] ClientDto client)
         {
             var result = await _mediator.Send(new AddClientCommand(client.FirstName, client.LastName));
-
-            return Ok(result);
+            
+            return Ok(result.NewClientId.ToString());
         }
     }
 }

@@ -28,21 +28,26 @@ namespace MediatrSample
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-                        
+            services.AddControllers();                        
             services.AddMediatR(typeof(AddClientCommand).Assembly);
             services.AddInfrastructureServices(Configuration);
+            services.AddSwaggerGen();
         }
 
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseSwagger();
-            app.UseSwaggerUI(options =>
+            if (!env.IsEnvironment("test"))
             {
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "MediatR Example API");
-            });
+                app.UseSwagger();
+                app.UseSwaggerUI(options =>
+                {
+                    options.SwaggerEndpoint("/swagger/v1/swagger.json", "MediatR Example API");
+                });
+            }
+
+
 
             app.UseRouting();
             

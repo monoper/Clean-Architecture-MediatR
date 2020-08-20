@@ -7,3 +7,15 @@
 /MediatrSample.Infrastructure/obj/
 /MediatrSample/bin/
 /MediatrSample/obj/
+/src/MediatrSample.Api/bin/
+/src/MediatrSample.Api/obj/
+/src/MediatrSample.Application/bin/
+/src/MediatrSample.Application/obj/
+/src/MediatrSample.Infrastructure/obj/Debug/
+/src/MediatrSample.Domain/obj/
+/src/MediatrSample.Infrastructure/bin/
+/src/MediatrSample.Infrastructure/obj/
+/src/MediatrSample.Domain/bin/
+/test/MediatrSample.Test.IntegrationTests/bin/
+/test/MediatrSample.Test.IntegrationTests/obj/Debug
+/test/MediatrSample.Test.IntegrationTests/obj/

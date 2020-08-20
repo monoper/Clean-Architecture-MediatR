@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatrSample.Api", "MediatrSample\MediatrSample.Api.csproj", "{66309BC9-2817-41D2-9AE1-2B372459A893}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatrSample.Api", "src\MediatrSample.Api\MediatrSample.Api.csproj", "{66309BC9-2817-41D2-9AE1-2B372459A893}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatrSample.Domain", "MediatrSample.Domain\MediatrSample.Domain.csproj", "{423A6A20-F2D3-4D50-9AB8-182F739175EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatrSample.Domain", "src\MediatrSample.Domain\MediatrSample.Domain.csproj", "{423A6A20-F2D3-4D50-9AB8-182F739175EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatrSample.Infrastructure", "MediatrSample.Infrastructure\MediatrSample.Infrastructure.csproj", "{5BBE68B4-5548-40DF-A109-40F705794CB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatrSample.Infrastructure", "src\MediatrSample.Infrastructure\MediatrSample.Infrastructure.csproj", "{5BBE68B4-5548-40DF-A109-40F705794CB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatrSample.Application", "MediatrSample.Application\MediatrSample.Application.csproj", "{64D51E4B-077D-4B7A-9D14-F100ADA570CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatrSample.Application", "src\MediatrSample.Application\MediatrSample.Application.csproj", "{64D51E4B-077D-4B7A-9D14-F100ADA570CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatrSample.Test.IntegrationTests", "test\MediatrSample.Test.IntegrationTests\MediatrSample.Test.IntegrationTests.csproj", "{F16DF310-DB0D-48BC-B1A3-32D19E9D4B56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{64D51E4B-077D-4B7A-9D14-F100ADA570CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64D51E4B-077D-4B7A-9D14-F100ADA570CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64D51E4B-077D-4B7A-9D14-F100ADA570CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F16DF310-DB0D-48BC-B1A3-32D19E9D4B56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F16DF310-DB0D-48BC-B1A3-32D19E9D4B56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F16DF310-DB0D-48BC-B1A3-32D19E9D4B56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F16DF310-DB0D-48BC-B1A3-32D19E9D4B56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
