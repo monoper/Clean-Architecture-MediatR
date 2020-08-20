@@ -1,0 +1,9 @@
+/.vs/
+/MediatrSample.Application/obj/
+/MediatrSample.Domain/bin/
+/MediatrSample.Application/bin/
+/MediatrSample.Domain/obj/
+/MediatrSample.Infrastructure/bin/
+/MediatrSample.Infrastructure/obj/
+/MediatrSample/bin/
+/MediatrSample/obj/
