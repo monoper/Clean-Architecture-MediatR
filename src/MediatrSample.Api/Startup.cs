@@ -47,8 +47,6 @@ namespace MediatrSample
                 });
             }
 
-
-
             app.UseRouting();
             
             app.UseEndpoints(endpoints =>

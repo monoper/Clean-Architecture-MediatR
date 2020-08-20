@@ -39,7 +39,7 @@ namespace MediatrSample.Api.Controllers
             return Ok(result.Clients.Select(i => new ClientDto(i)));
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("{id}/archive")]
         public async Task<IActionResult> ArchiveClient(Guid id)
         {
             await _mediator.Send(new ArchiveClientCommand(id));
@@ -47,7 +47,7 @@ namespace MediatrSample.Api.Controllers
             return Ok();
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("{id}/activate")]
         public async Task<IActionResult> ActivateClient(Guid id)
         {
             await _mediator.Send(new ArchiveClientCommand(id));
